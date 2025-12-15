@@ -40,7 +40,7 @@ struct DispatchInstr {
 void set_dispatch(Vtb_issue *top, const std::vector<DispatchInstr>& instrs) {
     // 先清零
     top->dispatch_valid = 0;
-    for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < INSTR_PER_FETCH; ++i) {
         top->dispatch_op[i] = 0;
         top->dispatch_dst[i] = 0;
         top->dispatch_v1[i] = 0;
