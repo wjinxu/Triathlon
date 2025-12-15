@@ -136,7 +136,7 @@ int main(int argc, char **argv) {
     // 我们给一点时间让它们发射
     for(int i=0; i<3; ++i) {
         if (top->alu0_en) {
-            std::cout << "  [Cycle " << i << "] ALU0 Fire! Op=0x" << std::hex << top->alu0_op << std::endl;
+            std::cout << "  [Cycle " << i << "] ALU0 Fire! Op=0x" << std::hex << top->alu0_op << std::dec << std::endl;
             if (top->alu0_op == OP_ADD) executed_0 = true;
             if (top->alu0_op == OP_SUB) executed_1 = true;
         }
